@@ -285,7 +285,7 @@ def check_percent_memory_used(result):
         samples = op['samples']
         mem_used = samples['mem_used'].pop()
         max_size = samples['ep_max_size'].pop()
-    status_value = mem_used / max_size * 100
+    status_value = float(mem_used) / float(max_size) * 100
     check_levels('CB percentage of memory used', status_value, False)
 
 
